@@ -11,17 +11,16 @@ namespace Pinetime {
       public:
         Calculator(DisplayApp* app, Controllers::DateTime& dateTimeController);
         ~Calculator() override;
+        void UpdateTOTP();
+        void Refresh() override;
 
         bool OnTouchEvent(TouchEvents event) override;
 
       private:
-        lv_style_t btn_style;
         lv_task_t* taskRefresh;
-        lv_obj_t* btnPlayPause;
-        lv_obj_t* txtPlayPause;
 
-        lv_obj_t* scoreText;
-        unsigned int score = 0;
+        lv_obj_t* unixTimeText;
+        lv_obj_t* awsKey;
 
         const Controllers::DateTime& dateTimeController;
       };
