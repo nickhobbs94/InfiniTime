@@ -51,7 +51,7 @@ namespace Pinetime {
           {"2", Apps::Twos},
           {Symbols::chartLine, Apps::Motion},
           {Symbols::drum, Apps::Metronome},
-          {Symbols::map, Apps::Navigation},
+          {"+", Apps::Calculator},
         }};
         ScreenList<nScreens> screens;
       };
